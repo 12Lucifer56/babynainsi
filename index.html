@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 Months With You 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0d0d16; /* FULL DARK */
+  color:#ffdbe6;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* container */
+.container{
+  width:100%;
+  max-width:420px;
+  padding:20px;
+  text-align:center;
+}
+
+/* headings */
+h1{
+  font-family:'Pacifico', cursive;
+  color:#ff9bb3;
+  font-size:26px;
+  text-shadow:0 0 10px rgba(255,155,179,0.4);
+  margin-bottom:10px;
+}
+
+p{
+  font-size:14px;
+  line-height:1.6;
+  margin-top:10px;
+}
+
+/* button */
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
+  background:rgba(255,155,179,0.15);
+  color:#ffb6c9;
+  font-size:14px;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* pages */
+.page{ display:none; }
+.active{ display:block; }
+
+/* soft hearts */
+.heart{
+  position:fixed;
+  color:#ff9bb3;
+  opacity:0.5;
+  animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+  from{
+    transform:translateY(0);
+    opacity:0.5;
+  }
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
+
+/* stickers */
+.sticker{
+  font-size:30px;
+  margin-top:12px;
+  animation:soft 3s infinite ease-in-out;
+}
+
+@keyframes soft{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+}
+
+.sunflower{
+  font-size:22px;
+  margin-top:10px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>Happy 2 Months 💗</h1>
+  <p>
+  Nainsi these two months with you feel like the softest and most beautiful part of my life.  
+  You are my peace, my comfort, my everything. 💕🌙
+  </p>
+  <div class="sunflower">🌻 🌻</div>
+  <button onclick="next()">Open 💌</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>Only You 🫂</h1>
+  <p>
+  I love you in every form your smile, your silence, your thoughts.  
+  Nainsi thankyou so muchh for being mine yrrr really nainsi your presence your words and you matters and means a lot for my life and yess baby you are onl my life i dont have much things to say here i will say them all in audio okiee honey but then also i would like to say thankyou so much for accepting me my love and loving me like this becuase i never thought i will deserve this much love yrrr from an angel baby thankyou so mucchh and i really loves you a lott darling now go and check our dm there are audios waitng for ou and your ayush is also waiting honey I love you so mucchhh my nainsi and i love ou uncondintionally honey ❤️ 💕
+  </p>
+  <div class="sticker">✨ 🥹 🫂 💗</div>
+  <button onclick="next()">Next →</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>My World 💞</h1>
+  <p>
+  You are not just someone I love…  
+  you are my home, my safe place, my forever feeling
+    Every moment with you feels special.  
+  Even silence with you feels complete.  
+  I don’t need anything else cause i see m god in you honey and for me everything is you and your lovesweetheart 💕✨🫂😚🥹. 🥹
+  </p>
+  <div class="sticker">💏 🫶</div>
+  <button onclick="next()">Last →</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>Forever 💖</h1>
+  <p>
+  Happy 2 months again my love.  
+  And this is just the beginning honey in this life cause our soules are already with each others even we dont know from how much time  
+  I will always love you moree honeyy more and more evry min my love and i will never let this bond break i will make all impossiable things possiable baby but the bond will never break an my love for you will be so much that you will feel it a lot but we both could never be able to express it fully honey i will love you tiill the whole universe and back ✨🥹🫂💕🍀   ❤️</p>
+  <div class="sunflower">🌻💛🌻</div>
+</div>
+
+</div>
+
+<script>
+
+let current=1;
+
+function next(){
+  document.getElementById("p"+current).classList.remove("active");
+  current++;
+  document.getElementById("p"+current).classList.add("active");
+}
+
+/* soft floating hearts */
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💗";
+
+  h.style.left=Math.random()*100+"vw";
+  h.style.bottom="0px";
+  h.style.fontSize=(10+Math.random()*15)+"px";
+  h.style.animationDuration=(5+Math.random()*4)+"s";
+
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
+},500);
+
+</script>
+
+</body>
+</html>
